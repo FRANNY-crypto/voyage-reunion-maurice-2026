@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌴 Planning Voyage — Réunion & Maurice • Juin 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy-mid: #1a3a5c;
+  --teal: #0891b2;
+  --teal-light: #e0f7fa;
+  --reunion: #065f46;
+  --reunion-mid: #059669;
+  --reunion-light: #d1fae5;
+  --reunion-accent: #34d399;
+  --maurice: #4c1d95;
+  --maurice-mid: #7c3aed;
+  --maurice-light: #ede9fe;
+  --amber: #b45309;
+  --amber-mid: #d97706;
+  --amber-light: #fef3c7;
+  --red: #b91c1c;
+  --red-light: #fee2e2;
+  --sand: #fef9f0;
+  --white: #ffffff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f3f6fb;
+  color: var(--gray-800);
+  font-size: 15px;
+  line-height: 1.6;
+}
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(160deg, #071221 0%, #0d2240 40%, #0a4a6e 100%);
+  color: white;
+  padding: 36px 20px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 60%, rgba(8,145,178,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(5,150,105,0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 100%, rgba(217,119,6,0.08) 0%, transparent 40%);
+}
+.hero-inner { position: relative; z-index: 1; }
+.hero-flag { font-size: 2.2rem; margin-bottom: 6px; letter-spacing: 4px; }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.hero-sub {
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-weight: 300;
+}
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.chip {
+  padding: 4px 13px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.chip-green { background: rgba(52,211,153,0.2); border: 1px solid rgba(52,211,153,0.35); color: #6ee7b7; }
+.chip-blue { background: rgba(56,189,248,0.2); border: 1px solid rgba(56,189,248,0.35); color: #7dd3fc; }
+.chip-purple { background: rgba(196,181,253,0.2); border: 1px solid rgba(196,181,253,0.35); color: #c4b5fd; }
+.chip-amber { background: rgba(252,211,77,0.2); border: 1px solid rgba(252,211,77,0.3); color: #fcd34d; }
+
+/* WRAP */
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 0 40px; }
+
+/* ALERT BLOCKS */
+.alerts { padding: 14px 14px 0; display: flex; flex-direction: column; gap: 10px; }
+.alert {
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+.alert-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.alert-red { background: var(--red-light); border-left: 3px solid #dc2626; }
+.alert-amber { background: var(--amber-light); border-left: 3px solid #f59e0b; }
+.alert-blue { background: var(--teal-light); border-left: 3px solid var(--teal); }
+.alert strong { display: block; margin-bottom: 1px; font-weight: 600; }
+
+/* SECTION HEADERS */
+.sec-head {
+  padding: 22px 14px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sec-head h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.sec-line {
+  flex: 1;
+  height: 1px;
+  opacity: 0.3;
+}
+.sec-reunion h2 { color: var(--reunion); }
+.sec-reunion .sec-line { background: var(--reunion); }
+.sec-maurice h2 { color: var(--maurice-mid); }
+.sec-maurice .sec-line { background: var(--maurice-mid); }
+.sec-retour h2 { color: var(--teal); }
+.sec-retour .sec-line { background: var(--teal); }
+.sec-memo h2 { color: var(--navy-mid); }
+.sec-memo .sec-line { background: var(--navy-mid); }
+.sec-check h2 { color: var(--amber); }
+.sec-check .sec-line { background: var(--amber); }
+
+/* DAY CARDS */
+.day { margin: 0 14px 14px; border-radius: 14px; overflow: hidden; background: var(--white); box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 3px 10px rgba(0,0,0,0.06); }
+.day-head {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.dh-reunion { background: linear-gradient(135deg, #064e3b, #059669); }
+.dh-transit { background: linear-gradient(135deg, #1e1b4b, #4338ca); }
+.dh-maurice { background: linear-gradient(135deg, #2e1065, #7c3aed); }
+.dh-depart { background: linear-gradient(135deg, #0c1a2e, #1d4068); }
+.dh-retour { background: linear-gradient(135deg, #1c1917, #44403c); }
+.dh-reunion-last { background: linear-gradient(135deg, #014737, #047857); }
+
+.day-num {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700; font-size: 0.78rem; color: white; text-align: center; line-height: 1.1;
+}
+.day-meta { flex: 1; }
+.day-meta strong { display: block; color: white; font-size: 0.92rem; font-weight: 600; }
+.day-meta span { color: rgba(255,255,255,0.72); font-size: 0.74rem; }
+.day-ico { font-size: 1.6rem; }
+
+/* TIMELINE */
+.tl { padding: 12px 14px; }
+.ev {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--gray-100);
+  align-items: flex-start;
+}
+.ev:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.ev-t {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  min-width: 42px;
+  text-align: right;
+  flex-shrink: 0;
+  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.ev-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.d-g { background: var(--reunion-mid); }
+.d-b { background: var(--teal); }
+.d-p { background: var(--maurice-mid); }
+.d-a { background: var(--amber-mid); }
+.d-r { background: #ef4444; }
+.d-k { background: var(--gray-500); }
+
+.ev-c { flex: 1; }
+.ev-c b { display: block; font-size: 0.87rem; font-weight: 600; color: var(--gray-900); line-height: 1.3; }
+.ev-c p { font-size: 0.78rem; color: var(--gray-600); margin-top: 2px; line-height: 1.45; }
+.ev-c .warn { font-size: 0.75rem; color: #dc2626; font-weight: 600; margin-top: 3px; }
+.ev-c .tip { font-size: 0.75rem; color: var(--amber); font-weight: 500; margin-top: 3px; }
+.ev-c .note {
+  margin-top: 5px;
+  background: var(--gray-100);
+  border-radius: 6px;
+  padding: 6px 9px;
+  font-size: 0.76rem;
+  color: var(--gray-700);
+  line-height: 1.4;
+}
+
+/* FLIGHT STRIP */
+.fl-strip {
+  margin: 6px 0;
+  background: var(--gray-900);
+  color: white;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.8rem;
+}
+.fl-route { display: flex; align-items: center; gap: 6px; margin-bottom: 7px; }
+.fl-from, .fl-to { font-weight: 700; font-size: 0.95rem; }
+.fl-arr { flex: 1; text-align: center; color: #38bdf8; font-size: 0.9rem; }
+.fl-info { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; font-size: 0.75rem; opacity: 0.82; }
+.fl-info div span { display: block; opacity: 0.6; font-size: 0.68rem; margin-bottom: 1px; }
+
+/* RESTO BOX */
+.resto {
+  margin-top: 5px;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.78rem;
+}
+.resto strong { color: var(--amber); display: block; font-size: 0.8rem; margin-bottom: 1px; }
+.resto span { color: #78350f; }
+
+/* MEMO CARDS */
+.memo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 14px 14px; }
+.m-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 13px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.05);
+}
+.m-card h4 { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.7px; color: var(--gray-500); margin-bottom: 5px; font-weight: 600; }
+.m-card .mn { font-size: 0.88rem; font-weight: 600; color: var(--gray-900); }
+.m-card .mv { font-size: 0.82rem; color: var(--teal); margin-top: 2px; }
+.m-card .mv2 { font-size: 0.78rem; color: var(--gray-600); margin-top: 1px; }
+.m-card-full { grid-column: span 2; }
+
+/* CHECKLIST */
+.checklist { padding: 0 14px 14px; display: flex; flex-direction: column; gap: 8px; }
+.ci {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 11px 13px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  font-size: 0.83rem;
+}
+.ci-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.ci-text { flex: 1; }
+.ci-text strong { display: block; font-weight: 600; color: var(--gray-900); font-size: 0.84rem; }
+.ci-text span { color: var(--gray-600); font-size: 0.78rem; line-height: 1.4; display: block; margin-top: 2px; }
+.ci-badge {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.b-red { background: var(--red-light); color: var(--red); }
+.b-amber { background: var(--amber-light); color: var(--amber); }
+.b-green { background: var(--reunion-light); color: var(--reunion); }
+.b-blue { background: var(--teal-light); color: var(--teal); }
+
+.divider { height: 6px; background: var(--gray-100); margin: 6px 0; }
+
+/* KEY NUMBERS */
+.key-nums {
+  margin: 0 14px 14px;
+  background: linear-gradient(135deg, #0c1a2e, #1a3a5c);
+  border-radius: 14px;
+  padding: 16px;
+  color: white;
+}
+.key-nums h3 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 12px; opacity: 0.9; }
+.kn-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.8rem;
+}
+.kn-item:last-child { border-bottom: none; }
+.kn-label { opacity: 0.7; font-size: 0.75rem; }
+.kn-val { font-weight: 600; color: #7dd3fc; text-align: right; max-width: 55%; font-size: 0.79rem; }
+.kn-val small { display: block; font-weight: 400; color: rgba(255,255,255,0.55); font-size: 0.7rem; }
+
+/* DOCS REQUIRED */
+.docs-box { margin: 0 14px 14px; background: var(--white); border-radius: 12px; padding: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+.docs-box h3 { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-500); margin-bottom: 10px; }
+.doc-row { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray-100); font-size: 0.82rem; }
+.doc-row:last-child { border-bottom: none; }
+.doc-ico { font-size: 1rem; flex-shrink: 0; }
+.doc-text { flex: 1; font-weight: 500; }
+.doc-note { font-size: 0.73rem; color: var(--gray-500); }
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 22px 16px;
+  font-size: 0.78rem;
+  margin-top: 10px;
+}
+footer strong { display: block; font-family: 'Playfair Display', serif; color: white; font-size: 1rem; margin-bottom: 4px; }
+
+@media(max-width:480px) {
+  .hero h1 { font-size: 1.5rem; }
+  .memo-grid { grid-template-columns: 1fr; }
+  .m-card-full { grid-column: span 1; }
+  .fl-info { grid-template-columns: 1fr; }
+}
+@media print {
+  body { font-size: 13px; }
+  .day { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">🏝️ 🌋 🐢</div>
+    <h1>Réunion &amp; Île Maurice</h1>
+    <div class="hero-sub">François &amp; Clémentine • Voyage Privé</div>
+    <div class="hero-chips">
+      <span class="chip chip-green">🌋 Réunion 7–14 juin</span>
+      <span class="chip chip-purple">🐬 Maurice 14–19 juin</span>
+      <span class="chip chip-blue">✈️ Retour Paris 20 juin</span>
+    </div>
+  </div>
+</div>
+
+<!-- ⚠️ ALERTES CRITIQUES -->
+<div class="alerts">
+  <div class="alert alert-red">
+    <span class="alert-icon">🧳</span>
+    <div>
+      <strong>BAGAGES À L'ALLER = CABINE SEULEMENT</strong>
+      Vol BF700 (Paris→Réunion) et AF7952 (Réunion→Maurice) : 2 bagages à main uniquement, PAS de soute. Vol retour Emirates : 2×20kg en soute. → Vérifiez dès aujourd'hui avec Voyage Privé si ajout soute possible sur les vols aller.
+    </div>
+  </div>
+  <div class="alert alert-red">
+    <span class="alert-icon">🛂</span>
+    <div>
+      <strong>PASSEPORT OBLIGATOIRE POUR MAURICE &amp; DUBAI</strong>
+      Réunion (DOM) = CNI suffisante. Maurice (pays étranger) + escale Dubai = PASSEPORT requis, valide minimum 6 mois après le retour (soit jusqu'en décembre 2026 au moins). Vérifiez vos passeports !
+    </div>
+  </div>
+  <div class="alert alert-amber">
+    <span class="alert-icon">📱</span>
+    <div>
+      <strong>CHECK-IN FRENCH BEE → À FAIRE LE VENDREDI 5 JUIN</strong>
+      Ouverture entre 48h et 24h avant départ. Sur <strong>frenchbee.com</strong> → référence compagnie <strong>YNTOE3</strong> → nom passager principal : <strong>LATY</strong>. Check-in Emirates : à faire à partir du mercredi 17 juin 16h15 (réf 2MD9JW).
+    </div>
+  </div>
+  <div class="alert alert-amber">
+    <span class="alert-icon">🤿</span>
+    <div>
+      <strong>PLONGÉE + VOL = RÈGLE DES 18-24H</strong>
+      Pas de plongée le <strong>samedi 13 juin</strong> (vol Maurice dim 14 à 10h10). Pas de plongée le <strong>jeudi 18 juin</strong> (vol retour ven 19 à 16h15).
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════ MÉMO GLOBAL ═══════════════════ -->
+<div class="sec-head sec-memo">
+  <h2>📋 Mémo Global</h2>
+  <div class="sec-line"></div>
+</div>
+
+<!-- Numéros urgence -->
+<div class="key-nums">
+  <h3>📞 Numéros d'urgence &amp; Contacts clés</h3>
+  <div class="kn-item"><span class="kn-label">CONNECTIONS Réunion (assistance + voiture)</span><span class="kn-val">06 92 40 32 09<small>Comptoir face sortie Roland Garros</small></span></div>
+  <div class="kn-item"><span class="kn-label">SummerTimes Maurice (planification)</span><span class="kn-val">+230 427 1111<small>Lun–Ven 8h30–16h30 / Sam 9h–12h</small></span></div>
+  <div class="kn-item"><span class="kn-label">Kursley Poisson – Maurice (urgence 24h/7j)</span><span class="kn-val">+230 594 02663</span></div>
+  <div class="kn-item"><span class="kn-label">SummerTimes Aéroport Maurice</span><span class="kn-val">+230 525 18601<small>Bureau n°16, à gauche après douane</small></span></div>
+  <div class="kn-item"><span class="kn-label">Santa Apolonia Résidence (Saint-Leu)</span><span class="kn-val">0262 83 01 02</span></div>
+  <div class="kn-item"><span class="kn-label">Hélilagon (déjà réservé, 10h30)</span><span class="kn-val">helilagon.com<small>Base de l'Éperon, Saint-Gilles (~20 min de Saint-Leu)</small></span></div>
+  <div class="kn-item"><span class="kn-label">Pikpik Tours (mardi 9 juin)</span><span class="kn-val">pikpiktours.com</span></div>
+  <div class="kn-item"><span class="kn-label">Excelsus Plongée (à réserver – lun 8)</span><span class="kn-val">+262 692 70 54 99<small>Port de Saint-Leu</small></span></div>
+  <div class="kn-item"><span class="kn-label">Château de Sable (réserv. obligatoire)</span><span class="kn-val">+262 262 34 79 26</span></div>
+  <div class="kn-item"><span class="kn-label">Blue Margouillat (gastronomique)</span><span class="kn-val">+262 262 34 64 00</span></div>
+  <div class="kn-item"><span class="kn-label">Chez Tino – Maurice (mer fruits de mer)</span><span class="kn-val">+230 480 2769<small>Fermé le mardi</small></span></div>
+  <div class="kn-item"><span class="kn-label">Blues Diving Centre – Belle Mare</span><span class="kn-val">Via hôtel ou Google Maps</span></div>
+  <div class="kn-item"><span class="kn-label">Assurance voyage XplorAssur</span><span class="kn-val">Contrat EUR2401FR<small>Bon SWA009144824</small></span></div>
+</div>
+
+<!-- Références dossier -->
+<div class="memo-grid">
+  <div class="m-card">
+    <h4>📁 Dossier Voyage Privé</h4>
+    <div class="mn">104882659VPFR</div>
+    <div class="mv2">Nom réservation : LATY</div>
+  </div>
+  <div class="m-card">
+    <h4>✈️ Réf compagnie (BF700)</h4>
+    <div class="mn">YNTOE3</div>
+    <div class="mv2">French Bee – Nom : LATY</div>
+  </div>
+  <div class="m-card">
+    <h4>✈️ Réf Emirates (retour)</h4>
+    <div class="mn">2MD9JW</div>
+    <div class="mv2">Emirates – Nom : LATY</div>
+  </div>
+  <div class="m-card">
+    <h4>🏨 Hôtel Maurice</h4>
+    <div class="mn">Ref 3145938</div>
+    <div class="mv2">Radisson Blu Poste Lafayette</div>
+  </div>
+  <div class="m-card">
+    <h4>🏠 Hôtel Réunion</h4>
+    <div class="mn">Ref 32518/2026</div>
+    <div class="mv2">Santa Apolonia Résidence 4★</div>
+  </div>
+  <div class="m-card">
+    <h4>🔖 Code Samsonite</h4>
+    <div class="mn">SAMSXVP15</div>
+    <div class="mv2">–15% jusqu'au 31/10/26 sur samsonite.fr</div>
+  </div>
+</div>
+
+<!-- Documents à avoir -->
+<div class="docs-box">
+  <h3>📄 Documents à avoir sur soi</h3>
+  <div class="doc-row"><span class="doc-ico">🪪</span><div><span class="doc-text">CNI en cours de validité</span><div class="doc-note">Suffisante pour Réunion (DOM français)</div></div></div>
+  <div class="doc-row"><span class="doc-ico">📘</span><div><span class="doc-text">Passeport (×2, valide 6+ mois après retour)</span><div class="doc-note">Obligatoire pour Maurice + escale Dubai</div></div></div>
+  <div class="doc-row"><span class="doc-ico">🚗</span><div><span class="doc-text">Permis de conduire (×2 recommandé)</span><div class="doc-note">Location voiture Réunion – 2e conducteur : 35€ à part</div></div></div>
+  <div class="doc-row"><span class="doc-ico">💳</span><div><span class="doc-text">Carte bancaire pour cautions</span><div class="doc-note">Voiture : empreinte CB requise (franchise 600–1200€) • Santa Apolonia : caution 200€ empreinte CB</div></div></div>
+  <div class="doc-row"><span class="doc-ico">📱</span><div><span class="doc-text">Documents Voyage Privé (PDF)</span><div class="doc-note">Dossier 104882659VPFR + assurance SWA009144824</div></div></div>
+  <div class="doc-row"><span class="doc-ico">🃏</span><div><span class="doc-text">Cartes d'embarquement (à imprimer ou télécharger)</span><div class="doc-note">French Bee : check-in en ligne obligatoire (vendredi 5 juin). Emirates : check-in en ligne (à partir du 17/06 16h15)</div></div></div>
+</div>
+
+<!-- ═══════════════════ CHECK-LIST ═══════════════════ -->
+<div class="sec-head sec-check">
+  <h2>✅ Check-list avant le départ</h2>
+  <div class="sec-line"></div>
+</div>
+
+<div class="checklist">
+  <div class="ci"><span class="ci-icon">🧳</span><div class="ci-text"><strong>Vérifier les règles bagages French Bee</strong><span>Appeler Voyage Privé pour confirmer si soute possible (ou payer en supplément). Vol aller + interne = actuellement 2 bagages à main SEULEMENT. Très restrictif pour 2 semaines.</span></div><span class="ci-badge b-red">URGENT</span></div>
+  <div class="ci"><span class="ci-icon">📘</span><div class="ci-text"><strong>Vérifier validité passeports (×2)</strong><span>Doit être valide jusqu'en décembre 2026 au minimum. Les numéros de passeport sont manquants dans le dossier Voyage Privé.</span></div><span class="ci-badge b-red">URGENT</span></div>
+  <div class="ci"><span class="ci-icon">📱</span><div class="ci-text"><strong>Check-in en ligne French Bee → Vendredi 5 juin</strong><span>frenchbee.com → réf YNTOE3 → nom LATY. Télécharger ou imprimer les cartes d'embarquement.</span></div><span class="ci-badge b-red">URGENT</span></div>
+  <div class="ci"><span class="ci-icon">🤿</span><div class="ci-text"><strong>Réserver Excelsus Plongée pour le lundi 8 juin</strong><span>+262 692 70 54 99 ou excelsus-plongee.com. Préciser niveaux de plongée (débutants ou certifiés ?)</span></div><span class="ci-badge b-amber">À FAIRE</span></div>
+  <div class="ci"><span class="ci-icon">🚢</span><div class="ci-text"><strong>Réserver catamaran Île aux Cerfs pour le lundi 15 juin</strong><span>Via manawa.com, checkyeti.com ou viator.com. Préférer petit groupe (≤12 pers) avec BBQ + approche dauphins.</span></div><span class="ci-badge b-amber">À FAIRE</span></div>
+  <div class="ci"><span class="ci-icon">🍽️</span><div class="ci-text"><strong>Réserver Château de Sable : lundi 8 et/ou samedi 13</strong><span>+262 262 34 79 26 — indispensable, se remplit vite.</span></div><span class="ci-badge b-amber">À FAIRE</span></div>
+  <div class="ci"><span class="ci-icon">🍽️</span><div class="ci-text"><strong>Réserver Blue Margouillat (dîner gastronomique)</strong><span>+262 262 34 64 00 → prévoir le jeudi 11 juin (après Maïdo).</span></div><span class="ci-badge b-amber">À FAIRE</span></div>
+  <div class="ci"><span class="ci-icon">🏠</span><div class="ci-text"><strong>Réserver le parking Santa Apolonia</strong><span>Appeler l'hôtel (0262 83 01 02) : 1 place offerte mais à réserver à l'avance.</span></div><span class="ci-badge b-amber">À FAIRE</span></div>
+  <div class="ci"><span class="ci-icon">☀️</span><div class="ci-text"><strong>Confirmer le jour exact du vol Hélilagon</strong><span>Vous avez réservé à 10h30 — ce planning l'a placé le mercredi 10 juin. À confirmer avec Hélilagon.</span></div><span class="ci-badge b-blue">CONFIRMER</span></div>
+  <div class="ci"><span class="ci-icon">💊</span><div class="ci-text"><strong>Trousse médicale &amp; crème solaire indice 50+</strong><span>Médicaments habituels, antipaludéen si conseillé (Réunion/Maurice : risque faible mais vérifier), répulsif moustiques, antihistaminiques.</span></div><span class="ci-badge b-green">EMPORTER</span></div>
+  <div class="ci"><span class="ci-icon">🧥</span><div class="ci-text"><strong>Doudoune ou polaire (pour Maïdo et volcan)</strong><span>Il fait 2–8°C au Maïdo à l'aube. Coupe-vent imperméable aussi (Piton de la Fournaise). Obligatoire !</span></div><span class="ci-badge b-green">EMPORTER</span></div>
+  <div class="ci"><span class="ci-icon">💵</span><div class="ci-text"><strong>Prévoir liquide mauricien (roupies)</strong><span>Vous pouvez retirer à l'aéroport Maurice ou changer à l'hôtel. Cartes bancaires acceptées partout. Budget conseillé : ~3 000 MUR/pers (≈65€) pour pourboires, petits marchés.</span></div><span class="ci-badge b-green">PRATIQUE</span></div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ SAMEDI 6 JUIN ═══════════════════ -->
+<div class="sec-head sec-retour">
+  <h2>✈️ Samedi 6 juin — Départ Paris</h2>
+  <div class="sec-line"></div>
+</div>
+
+<div class="day">
+  <div class="day-head dh-depart">
+    <div class="day-num">J0</div>
+    <div class="day-meta">
+      <strong>Départ de Bois-Colombes → Paris-Orly</strong>
+      <span>Samedi 6 juin 2026</span>
+    </div>
+    <span class="day-ico">🛫</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">Matin</span><span class="ev-dot d-k"></span><div class="ev-c"><b>Derniers préparatifs bagages</b><p>Bagages cabine uniquement à l'aller. Vérifiez dimensions French Bee : 1 bagage cabine max 55×35×25cm + 1 bagage personnel 40×30×15cm. Gardez en cabine : documents, médicaments, chargeurs, appareil photo, doudoune.</p></div></div>
+    <div class="ev"><span class="ev-t">14h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>Vérification finale + check-in Emirates à ouvrir</b><p>Le check-in Emirates (retour) ouvre le mercredi 17 juin à 16h15. Réf 2MD9JW, nom LATY, sur emirates.com ou l'app Emirates.</p></div></div>
+    <div class="ev"><span class="ev-t">15h15</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🚖 Départ Bois-Colombes en VTC/taxi</b><p>Commandez votre VTC (Uber, Bolt, G7) 30 min à l'avance. Durée estimée jusqu'à Orly T4 : 45–75 min selon trafic samedi. Coût : 55–80€. Alternative : Métro L13 → Denfert → OrlyBus (1h30, moins confortable avec bagages).</p><p class="warn">⚠️ Vol BF700 départ 19h55 — ne tardez pas, Orly T4 peut être chargé le samedi soir.</p></div></div>
+    <div class="ev"><span class="ev-t">16h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>Arrivée Paris-Orly — Terminal 4 (French Bee)</b><p>Suivez les indications "French Bee" ou "Terminal 4 – Autres compagnies". Vous avez votre carte d'embarquement (check-in en ligne fait la veille). → Passez directement aux contrôles de sûreté.</p><div class="note">📍 Terminal 4 d'Orly est séparé des Terminaux 1-2-3. Bien vérifier le terminal sur les panneaux depuis l'arrivée.</div></div></div>
+    <div class="ev"><span class="ev-t">16h45</span><span class="ev-dot d-g"></span><div class="ev-c"><b>Contrôles de sûreté + accès côté pistes</b><p>Enlevez ceintures, montres, liquides (sac transparent obligatoire). Passez les portiques. Comptez 20–30 min pour la sûreté le samedi soir.</p></div></div>
+    <div class="ev"><span class="ev-t">17h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Dîner côté départ à Orly T4</b><p>Il n'y aura pas de vrai repas avant l'arrivée demain matin. Mangez bien ! Options : brasserie, sushis, snack, ou emportez des sandwichs + fruits pour le vol.</p></div></div>
+    <div class="ev"><span class="ev-t">17h55</span><span class="ev-dot d-r"></span><div class="ev-c"><b>⏰ Convocation officielle (heure limite)</b><p>C'est l'heure indiquée sur vos billets. Vous devez être en zone départ, gate annoncée sur les écrans.</p></div></div>
+    <div class="ev"><span class="ev-t">19h10</span><span class="ev-dot d-b"></span><div class="ev-c"><b>Embarquement BF700</b><p>L'embarquement commence généralement 45 min avant le départ. Repérez votre porte d'embarquement sur les écrans dès votre arrivée côté pistes.</p></div></div>
+    <div class="ev"><span class="ev-t">19h55</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🛫 DÉCOLLAGE — French Bee BF700</b>
+      <div class="fl-strip">
+        <div class="fl-route"><span class="fl-from">ORY</span><span class="fl-arr">──────✈──────</span><span class="fl-to">RUN</span></div>
+        <div class="fl-info"><div><span>Compagnie</span>French Bee BF700</div><div><span>Durée</span>~11h | Terminal 4</div><div><span>Départ</span>19h55 le 06/06</div><div><span>Arrivée</span>09h00 le 07/06</div></div>
+      </div>
+      <p class="tip">💡 Décalage horaire : Réunion = UTC+4, soit +2h vs Paris en été. Pas de jet-lag sévère.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ RÉUNION ═══════════════════ -->
+<div class="sec-head sec-reunion">
+  <h2>🌋 Réunion — L'Île Intense</h2>
+  <div class="sec-line"></div>
+</div>
+
+<!-- J1 DIMANCHE 7 JUIN -->
+<div class="day">
+  <div class="day-head dh-reunion">
+    <div class="day-num">J1<br>7/06</div>
+    <div class="day-meta"><strong>Arrivée Roland Garros → Saint-Leu</strong><span>Dimanche 7 juin</span></div>
+    <span class="day-ico">🛬</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">09h00</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🛬 Arrivée Roland Garros (Saint-Denis de La Réunion)</b><p>Bienvenue ! Passage douanes rapide (DOM français, CNI suffisante). Récupérez vos bagages (cabine, donc direct en sortie).</p></div></div>
+    <div class="ev"><span class="ev-t">09h15</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🔴 OBLIGATOIRE — Comptoir CONNECTIONS</b><p>En face de la sortie de l'aérogare (vous le verrez à la sortie des douanes). NE QUITTEZ PAS L'AÉROPORT sans y passer. Ils vous remettent vos vouchers, la clé de voiture, et tous vos contacts d'urgence.</p><div class="note">📞 Urgence CONNECTIONS : 06 92 40 32 09</div></div></div>
+    <div class="ev"><span class="ev-t">09h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Récupération de la voiture de location (catégorie 1)</b><p>Via CONNECTIONS REUNION. Documents à présenter : permis de conduire + carte bancaire (caution 600–1200€ par empreinte CB, PAS débité si pas de sinistre). Options utiles :</p><div class="note">• GPS : 15€/jour + caution 350€ — recommandé pour les routes de montagne<br>• 2e conducteur : 35€ par location<br>• Taxe aéroport : 35€ (incluse dans vos prestations Voyage Privé, à vérifier)</div></div></div>
+    <div class="ev"><span class="ev-t">10h15</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🛣️ Route vers Saint-Leu (~1h)</b><p>Depuis Roland Garros : prenez la RN1 direction Saint-Denis → La Possession → Route des Tamarins (2×2 voies rapides, la route principale de la côte ouest) → sortie Saint-Leu. Très facile et paysages superbes dès la descente vers l'ouest.</p><p class="tip">💡 Attention : conduire à gauche n'est pas obligatoire à La Réunion, la circulation est à droite comme en France !</p></div></div>
+    <div class="ev"><span class="ev-t">11h15</span><span class="ev-dot d-a"></span><div class="ev-c"><b>Arrivée à Saint-Leu — Dépôt bagages Santa Apolonia</b><p>Check-in officiel à 15h00. Laissez vos valises à la réception. 2 Bd Bonnier, Saint-Leu 97436. Tél : 0262 83 01 02. Demandez la place de parking offerte (à réserver en arrivant).</p></div></div>
+    <div class="ev"><span class="ev-t">12h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Premier déjeuner face au lagon</b><p>Marchez jusqu'au front de mer (~5 min). Le Lagon restaurant ou Le Château de Sable pour une assiette créole face à l'eau turquoise. Premier coucher de soleil de l'île, même à midi.</p></div></div>
+    <div class="ev"><span class="ev-t">14h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🌊 Promenade front de mer + snorkeling doux</b><p>Le lagon de Saint-Leu est l'un des plus beaux de l'île. Masque + tuba depuis la plage : coraux, poissons tropicaux, parfois tortues à 50m du bord. Décompressez du vol.</p></div></div>
+    <div class="ev"><span class="ev-t">15h00</span><span class="ev-dot d-g"></span><div class="ev-c"><b>✅ Check-in Santa Apolonia Résidence</b><p>Studio pour 2 avec kitchenette. Petit-déjeuner inclus chaque matin. Caution 200€ empreinte CB (non débitée). Forfait ménage fin de séjour inclus (à programmer à l'arrivée). Renouvellement de linge offert 1 fois (séjour 7 nuits).</p></div></div>
+    <div class="ev"><span class="ev-t">17h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🌅 Premier sunset — Rooftop La Villa Vanille</b><p>69 Rue du Lagon. Terrasse au-dessus du restaurant, vue panoramique sur le lagon et le coucher de soleil. Tapas + cocktails (mojitos réputés). Sans réservation pour le rooftop.</p></div></div>
+    <div class="ev"><span class="ev-t">20h00</span><span class="ev-dot d-k"></span><div class="ev-c"><b>🍽️ Dîner léger</b><p>Après 11h de vol, ne cherchez pas trop loin. Resto local ou plat à emporter. Couchez-vous tôt — réveil à 7h30 demain pour la plongée !</p></div></div>
+  </div>
+</div>
+
+<!-- J2 LUNDI 8 JUIN -->
+<div class="day">
+  <div class="day-head dh-reunion">
+    <div class="day-num">J2<br>8/06</div>
+    <div class="day-meta"><strong>🚁 Hélilagon 10h30 + 🪂 Parapente — La Journée Aérienne</strong><span>Lundi 8 juin ✅ Hélilagon CONFIRMÉ — Parapente à réserver d'urgence</span></div>
+    <span class="day-ico">🌪️</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">07h30</span><span class="ev-dot d-g"></span><div class="ev-c"><b>☕ Petit-déjeuner Santa Apolonia (inclus)</b><p>Mangez bien — vous aurez besoin d'énergie. Hydratez-vous. Évitez un repas trop lourd avant le parapente.</p></div></div>
+    <div class="ev"><span class="ev-t">09h15</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Départ vers la base Hélilagon de l'Éperon</b><p>Saint-Gilles / Les Trois-Bassins. ~20 min depuis Saint-Leu par la Route des Tamarins. Arrivez 15 min avant pour le briefing.</p><div class="note">📍 Hélistation de l'Éperon — site de 4 hectares en pleine savane, vue panoramique sur l'océan</div></div></div>
+    <div class="ev"><span class="ev-t">10h00</span><span class="ev-dot d-g"></span><div class="ev-c"><b>Accueil + briefing sécurité Hélilagon</b></div></div>
+    <div class="ev"><span class="ev-t">10h30</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🚁 DÉCOLLAGE — "L'Incontournable" 45 minutes</b><p>3 cirques (Mafate, Salazie, Cilaos) + Trou de Fer + Piton de la Fournaise + Plaine des Sables lunaire + lagon. Le tour complet de l'île depuis le ciel. Vous rentrez à l'appartement transformés.</p><p class="tip">💡 Demandez au pilote de raser la lave au Piton de la Fournaise si les conditions le permettent. Chargez bien les téléphones avant !</p></div></div>
+    <div class="ev"><span class="ev-t">11h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>Atterrissage + retour Saint-Leu</b><p>La montée d'adrénaline retombe. Buvez, mangez, reposez-vous 30 min avant de reprendre la route.</p></div></div>
+    <div class="ev"><span class="ev-t">12h15</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Déjeuner face au lagon</b><p>Le Lagon restaurant ou Le Château de Sable (déjeuner). Racontez votre vol en regardant le lagon que vous venez de survoler.</p></div></div>
+    <div class="ev"><span class="ev-t">14h15</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Direction site de parapente des Colimaçons</b><p>Rendez-vous au parking de Kélonia (point de RDV habituel des écoles de parapente). C'est à 10 min depuis le front de mer de Saint-Leu. Votre moniteur vous y attend.</p></div></div>
+    <div class="ev"><span class="ev-t">14h30</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🪂 PARAPENTE BI-PLACE — Vol au-dessus du lagon de Saint-Leu</b><p>Décollage depuis le site des Colimaçons (800–1600m selon formule). Vous vous élancez dans le vide avec votre pilote et planez silencieusement au-dessus des ravines, des champs de canne, du jardin botanique, puis du lagon turquoise. Terminez par des acrobaties au-dessus de la baie si vous demandez — <em>le vol adrénaline</em> du matin sera peut-être trop sage comparé à ça.</p><div class="note">
+• Ce matin vous avez VU l'île depuis un hélicoptère bruyant et puissant<br>
+• Cet après-midi vous PLANEZ sur l'île dans un silence absolu, suspendu dans l'air<br>
+• Deux sensations aériennes totalement opposées — c'est le programme le plus fou de l'île</div>
+      <p class="tip">💡 L'atterrissage se fait directement sur la plage de Saint-Leu. Vous posez les pieds dans le sable au bord du lagon.</p>
+      <div class="resto"><strong>🪂 Prestataires parapente Saint-Leu (à réserver MAINTENANT)</strong><span><b>Insul'Air Parapente</b> — insulair-parapente.re | <b>Air Lagon Parapente</b> (pionnier 1984, acrobaties possibles) — airlagon-parapente.fr | <b>Solid'Air Parapente</b> — solidair-parapente.fr | Tarif : ~80–120€/pers. Vol 20–45 min.</span></div>
+    </div></div>
+    <div class="ev"><span class="ev-t">16h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🌊 Atterrissage sur la plage + baignade post-vol</b><p>Vous venez de planer au-dessus de ce lagon — plongez-y maintenant. Snorkeling, baignade, champagne mental garanti.</p></div></div>
+    <div class="ev"><span class="ev-t">17h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🌅 Apéro coucher de soleil au Rooftop La Villa Vanille</b><p>Tapas + cocktails, vue sur le lagon que vous venez de survoler deux fois. Vous méritez ce moment.</p></div></div>
+    <div class="ev"><span class="ev-t">20h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️✨ Dîner — Château de Sable</b><p>52 Rue du Lagon. Votre première grande table sunset de la semaine. Fruits de mer, cuisine créole gastronomique, les pieds dans le lagon.</p>
+      <div class="resto"><strong>🍽️ Château de Sable — Réservation OBLIGATOIRE</strong><span>📞 +262 262 34 79 26</span></div>
+    </div></div>
+  </div>
+</div>
+
+<!-- J3 MARDI 9 JUIN -->
+<div class="day">
+  <div class="day-head dh-reunion">
+    <div class="day-num">J3<br>9/06</div>
+    <div class="day-meta"><strong>Grand tour 4×4 — Volcan &amp; Cascades</strong><span>Mardi 9 juin ✅ CONFIRMÉ avec Pikpik Tours</span></div>
+    <span class="day-ico">🌋</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">06h00</span><span class="ev-dot d-r"></span><div class="ev-c"><b>⏰ Réveil tôt</b><p>Pikpik Tour journée entière — vérifiez leur heure de départ exacte sur votre confirmation (habituellement 7h–8h depuis Saint-Leu).</p></div></div>
+    <div class="ev"><span class="ev-t">06h30</span><span class="ev-dot d-g"></span><div class="ev-c"><b>☕ Petit-déjeuner rapide + thermos de café</b></div></div>
+    <div class="ev"><span class="ev-t">07h00</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🚙 Départ Pikpik Tour "Cascade et Volcan" — Land Rover Defender</b><p>Votre guide réunionnais connaît l'île sur le bout des doigts. Au programme :</p><div class="note">
+• Montée Plaine des Cafres (1700m) → cultures d'ananas et géraniums<br>
+• Nez de Bœuf (2070m) → vue panoramique sur la Rivière des Remparts<br>
+• Traversée Plaine des Sables → paysage lunaire hallucinant<br>
+• Pas de Bellecombe (2311m) → le volcan actif devant vous, l'enclos Fouquet<br>
+• Cratère Commerson → gouffre volcanique à couper le souffle<br>
+• Route de l'Est → coulées de lave 2001–2007, Notre-Dame-des-Laves<br>
+• Déjeuner créole inclus (lentilles, rougail, cari poulet)<br>
+• Cascades de Langevin ou Takamaka (selon météo)
+    </div></div></div>
+    <div class="ev"><span class="ev-t">19h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🏠 Retour Saint-Leu</b><p>Vous serez bien épuisés (après hélico + parapente hier + journée volcan aujourd'hui). Douche, dîner léger, couchez-vous tôt — la semaine est dense et magnifique.</p></div></div>
+  </div>
+</div>
+
+<!-- J4 MERCREDI 10 JUIN -->
+<div class="day">
+  <div class="day-head dh-reunion">
+    <div class="day-num">J4<br>10/06</div>
+    <div class="day-meta"><strong>Plongée dans la réserve marine + Kélonia</strong><span>Mercredi 10 juin</span></div>
+    <span class="day-ico">🤿</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">07h30</span><span class="ev-dot d-g"></span><div class="ev-c"><b>☕ Petit-déjeuner tranquille</b><p>Après deux journées intenses (hélico+parapente lundi, Pikpik mardi), c'est une journée plus douce ce matin.</p></div></div>
+    <div class="ev"><span class="ev-t">08h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Départ pour Excelsus Plongée</b><p>1 Impasse des Plongeurs, port de plaisance Saint-Leu. 8–10 min depuis l'hôtel. Club noté 4,9★, moniteurs anglophones, ultra-professionnels.</p><div class="note">📞 +262 692 70 54 99 — excelsus-plongee.com — réservation à l'avance obligatoire</div></div></div>
+    <div class="ev"><span class="ev-t">08h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🤿 Plongée — Réserve naturelle marine de Saint-Leu</b><p>Sites d'exception : tombant de la Pointe au Sel (mur vertigineux jusqu'à 70m, poissons-scorpions, mérous, barracudas, requins), arche de la Fournaise, Sec Jaune (tombant coloré 26m, grottes aux jeux de lumière). Durée totale ~3h30 sur place.</p><p class="tip">💡 Précisez votre niveau de certification. Le tombant de la Pointe au Sel est réservé aux plongeurs expérimentés. Pour les débutants : baptême guidé dans la réserve marine, tortues et coraux garantis.</p></div></div>
+    <div class="ev"><span class="ev-t">12h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Déjeuner poisson frais sur le port</b></div></div>
+    <div class="ev"><span class="ev-t">14h00</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🐢 Kélonia — Observatoire des tortues marines</b><p>46 Rue du Gal de Gaulle, Saint-Leu (15 min à pied du front de mer). Centre de soin + exposition + aquarium sous-marin : les tortues nagent à travers les vitres. Compter 1h30–2h. Ouvert 9h–18h. ~10€/pers.</p><p class="tip">💡 C'est ici que les parapentistes du site des Colimaçons finissent parfois leur vol — vous l'avez vécu lundi, et vous le verrez depuis le sol.</p></div></div>
+    <div class="ev"><span class="ev-t">16h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🌊 Snorkeling libre au lagon</b><p>Depuis la plage de Saint-Leu. Calme garanti en fin d'après-midi dans la réserve marine.</p></div></div>
+    <div class="ev"><span class="ev-t">17h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍹 Apéro rooftop La Villa Vanille ou Le Lagon</b></div></div>
+    <div class="ev"><span class="ev-t">20h00</span><span class="ev-dot d-k"></span><div class="ev-c"><b>🍽️ Dîner</b><p>Soirée tranquille. Couchez-vous à 21h30 : réveil à 4h00 demain matin pour le Maïdo !</p></div></div>
+  </div>
+</div>
+
+<!-- J5 JEUDI 11 JUIN -->
+<div class="day">
+  <div class="day-head dh-reunion">
+    <div class="day-num">J5<br>11/06</div>
+    <div class="day-meta"><strong>Lever de soleil au Maïdo + Blue Margouillat</strong><span>Jeudi 11 juin — Réveil 4h00 !</span></div>
+    <span class="day-ico">🌄</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">04h00</span><span class="ev-dot d-r"></span><div class="ev-c"><b>⏰ RÉVEIL 4h00 — Le Maïdo vous attend</b><p>Préparez vos vêtements la veille : doudoune/polaire, coupe-vent, chaussures fermées, lampe frontale. Il fera 2–8°C au sommet.</p></div></div>
+    <div class="ev"><span class="ev-t">04h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Départ vers le Maïdo (~50 min depuis Saint-Leu)</b><p>Route forestière qui monte progressivement. GPS indispensable. Dernières portions en lacets serrés. Route ouverte dès 5h00.</p></div></div>
+    <div class="ev"><span class="ev-t">05h20</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🏔️ Arrivée belvédère du Maïdo (2200m)</b><p>Parking puis 5 min à pied jusqu'au belvédère. La nuit commence à peine à se teindre d'orange sur l'horizon. Attendez en silence.</p></div></div>
+    <div class="ev"><span class="ev-t">06h05</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🌄 LEVER DE SOLEIL sur le Cirque de Mafate</b><p>L'un des panoramas les plus forts de l'océan Indien. Le cirque inaccessible par la route se dévoile dans la lumière rasante : forêts verticales, ilets suspendus dans les nuages, crêtes déchirées. Moment de silence et d'émerveillement absolu. Prenez vos photos, mais surtout regardez avec vos yeux.</p></div></div>
+    <div class="ev"><span class="ev-t">07h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Descente vers Saint-Leu</b><p>Arrêt possible au Maïdo pour un café chaud au snack (si ouvert). La descente de nuit est belle aussi — vous verrez la côte ouest s'étirer en dessous de vous.</p></div></div>
+    <div class="ev"><span class="ev-t">09h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍳 Petit-déjeuner tardif / brunch</b><p>Retour à l'appartement ou café terrasse. Votre corps mérite une pause.</p></div></div>
+    <div class="ev"><span class="ev-t">11h00</span><span class="ev-dot d-k"></span><div class="ev-c"><b>Après-midi libre — repos mérité</b><p>Sieste, plage, spa si disponible, lecture face au lagon. C'est aussi le bon moment pour appeler Excelsus Plongée ou réserver vos activités Maurice (catamaran, plongée Blues Diving) si pas encore fait.</p></div></div>
+    <div class="ev"><span class="ev-t">20h00</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🍽️✨ DÎNER GASTRONOMIQUE — Le Blue Margouillat</b><p>6 Impasse Jean Albany, Saint-Leu. Restaurant de l'hôtel 5★ le plus réputé de l'île. Cuisine gastronomique créole + française, cave à fromages unique, accords remarquables. <em>"L'un des meilleurs repas de notre vie"</em> — avis récents.</p>
+      <div class="resto"><strong>🌟 Blue Margouillat — Réservation OBLIGATOIRE</strong><span>📞 +262 262 34 64 00 • Tenue correcte attendue</span></div>
+    </div></div>
+  </div>
+</div>
+
+<!-- J6 VENDREDI 12 JUIN -->
+<div class="day">
+  <div class="day-head dh-reunion">
+    <div class="day-num">J6<br>12/06</div>
+    <div class="day-meta"><strong>Randonnée dans le Cirque de Cilaos</strong><span>Vendredi 12 juin</span></div>
+    <span class="day-ico">🥾</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">07h00</span><span class="ev-dot d-g"></span><div class="ev-c"><b>☕ Petit-déjeuner + préparation sac de rando</b><p>Eau (min 2L), snacks, crème solaire, coupe-vent (altitude = vent), chaussures de randonnée. Il peut pleuvoir en milieu de journée dans le cirque.</p></div></div>
+    <div class="ev"><span class="ev-t">08h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Route vers Cilaos (~1h30 depuis Saint-Leu)</b><p>Via Saint-Louis puis la célèbre route des 400 virages qui grimpe dans le cirque. Spectaculaire et impressionnante. Après Cilaos : arrêt possible à l'Entre-Deux (village créole typique).</p><div class="note">⚠️ Cette route est étroite et sinueuse. Soyez prudent, attendez dans les virages. Départ tôt pour éviter les bus de tourisme.</div></div></div>
+    <div class="ev"><span class="ev-t">09h30</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🥾 Arrivée Cilaos (1200m) + randonnée</b><p>Options selon niveau et envie :</p><div class="note">
+<b>Facile (2–3h) :</b> Roche Merveilleuse → panorama sur le cirque et le Piton des Neiges (3070m, le plus haut sommet des DOM). Balisage facile.<br>
+<b>Moyen (4–5h) :</b> Tour du Morne de Cilaos → vues à 360° sur le cirque.<br>
+<b>Engagé :</b> Col du Taibit → accès Mafate (très sportif, pour randonneurs aguerris seulement)
+    </div></div></div>
+    <div class="ev"><span class="ev-t">13h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Déjeuner créole à Cilaos</b><p>Les restaurants du village servent les spécialités locales : lentilles de Cilaos (AOP), cari poulet de Cilaos, et le vin de Cilaos (le seul vin de Réunion, à goûter absolument).</p></div></div>
+    <div class="ev"><span class="ev-t">14h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🌿 Exploration du village</b><p>Cilaos est aussi connu pour sa broderie artisanale (très belle, parfaite en souvenir), ses sources thermales (bains si ouvert), et son ambiance de village perché dans un cirque entouré de murailles de 2000m.</p></div></div>
+    <div class="ev"><span class="ev-t">15h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Retour Saint-Leu (~1h30)</b></div></div>
+    <div class="ev"><span class="ev-t">17h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>Douche + détente + apéro lagon</b></div></div>
+    <div class="ev"><span class="ev-t">20h00</span><span class="ev-dot d-k"></span><div class="ev-c"><b>🍽️ Dîner</b><p>Resto local ou plat à l'appartement (kitchenette disponible dans le studio).</p></div></div>
+  </div>
+</div>
+
+<!-- J7 SAMEDI 13 JUIN -->
+<div class="day">
+  <div class="day-head dh-reunion-last">
+    <div class="day-num">J7<br>13/06</div>
+    <div class="day-meta"><strong>Marché + ULM Coucher de Soleil — Adieu Réunion</strong><span>Samedi 13 juin — ⛔ PAS DE PLONGÉE • 🛩️ Vol ULM ~17h00</span></div>
+    <span class="day-ico">🌅</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">07h30</span><span class="ev-dot d-g"></span><div class="ev-c"><b>☕ Petit-déjeuner + balade matinale sur le front de mer</b></div></div>
+    <div class="ev"><span class="ev-t">09h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🛒 Marché de Saint-Leu (ou marché de Saint-Paul, le plus grand — ~25 min)</b><p>Derniers achats souvenirs : rhums arrangés (goyave, letchi, vanille, café…), vanille de Bourbon, café Bourbon Pointu, épices créoles, chocolat Réunion. Le marché de Saint-Paul le samedi matin est le plus grand et le plus festif de l'île.</p></div></div>
+    <div class="ev"><span class="ev-t">11h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🌊 Snorkeling au lagon (masque + tuba uniquement)</b><p>Pas de bouteilles aujourd'hui — vol demain matin à 10h10. Snorkeling depuis la plage, aussi beau dans cette réserve marine.</p></div></div>
+    <div class="ev"><span class="ev-t">13h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Déjeuner — Château de Sable</b><p>Votre dernière table sur le lagon de Saint-Leu.</p></div></div>
+    <div class="ev"><span class="ev-t">15h00</span><span class="ev-dot d-r"></span><div class="ev-c"><b>⚠️ Bagages + check-in en ligne AF7952</b><p>Préparez vos bagages cabine pour demain (réveil 5h45, check-out 6h15). Check-in en ligne AF7952 sur airfrance.fr, réf YNT9P3 — à faire aujourd'hui depuis 10h10.</p></div></div>
+    <div class="ev"><span class="ev-t">16h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Route vers la Base ULM de Cambaie — Saint-Paul (~25 min)</b><p>Réunion ULM est basé à la Base de Cambaie, Saint-Paul. Arrivez 15 min avant pour le briefing.</p><div class="note">📍 Réunion ULM — reunionulm.re — Base de Cambaie, Saint-Paul<br>Réservez la formule <b>"Vol Coucher de Soleil + Apéritif Local"</b> — 2 places en simultané possibles avec 2 avions côte à côte !</div></div></div>
+    <div class="ev"><span class="ev-t">16h30</span><span class="ev-dot d-g"></span><div class="ev-c"><b>Briefing + installation dans l'ULM biplace</b><p>Choisissez entre avion ULM classique (confortable) ou autogire/gyrocoptère (sensation plus ouverte, plus brute, comme être "posé dans le ciel"). Le gyrocoptère est l'expérience la plus intense.</p></div></div>
+    <div class="ev"><span class="ev-t">17h00</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🛩️ DÉCOLLAGE — Vol Sunset au-dessus du lagon</b><p>~25 min de vol le long du littoral ouest : lagon de Saint-Leu → barrière de corail → lagon de l'Hermitage et de la Saline → cap sur la Baie de Saint-Paul. La lumière dorée du soleil couchant transforme le lagon turquoise en miroir de feu. Avec un peu de chance : dauphins juste sous les ailes.</p><p class="tip">💡 En juin, le soleil se couche vers 17h20–17h30. Vous serez exactement dans la lumière parfaite. C'est votre dernier vol sur l'île.</p></div></div>
+    <div class="ev"><span class="ev-t">17h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍹 COCKTAIL LOCAL + Mets créoles sur la terrasse de Réunion ULM</b><p>La formule inclut un apéritif local avec des spécialités créoles sur leur terrasse face à la mer, juste après le vol. Vous regardez le soleil finir de plonger dans l'océan Indien avec un ti-punch dans la main. C'est la dernière image de La Réunion.</p></div></div>
+    <div class="ev"><span class="ev-t">18h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Retour Saint-Leu (~25 min)</b></div></div>
+    <div class="ev"><span class="ev-t">20h00</span><span class="ev-dot d-k"></span><div class="ev-c"><b>🍽️ Dîner simple — La Villa Vanille ou resto local</b><p>Pas trop lourd ni trop tard — réveil à 5h45 demain. Ce soir, l'émotion suffit.</p></div></div>
+    <div class="ev"><span class="ev-t">21h00</span><span class="ev-dot d-k"></span><div class="ev-c"><b>🛏️ Couchez-vous tôt — double réveil sur 5h45 et 5h50</b></div></div>
+  </div>
+</div>
+
+<!-- J8 TRANSIT DIMANCHE 14 JUIN -->
+<div class="day">
+  <div class="day-head dh-transit">
+    <div class="day-num">J8<br>14/06</div>
+    <div class="day-meta"><strong>Transfert Réunion → Île Maurice</strong><span>Dimanche 14 juin — Réveil 5h45 !</span></div>
+    <span class="day-ico">🛫🛬</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">05h45</span><span class="ev-dot d-r"></span><div class="ev-c"><b>⏰ RÉVEIL — Convocation 8h10, vol à 10h10</b></div></div>
+    <div class="ev"><span class="ev-t">06h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>☕ Café rapide + check-out Santa Apolonia</b><p>La réception est peut-être fermée tôt le matin. Prévenez-les la veille pour organiser la remise des clés. Laissez l'appartement propre (le ménage de fin de séjour est inclus hors cuisine/vaisselle).</p></div></div>
+    <div class="ev"><span class="ev-t">06h20</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Route Roland Garros (~1h)</b><p>Même chemin qu'à l'aller, dans l'autre sens : Saint-Leu → Route des Tamarins → La Possession → Roland Garros.</p></div></div>
+    <div class="ev"><span class="ev-t">07h20</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🚗 RENDRE LA VOITURE DE LOCATION</b><p>Retour à l'agence CONNECTIONS à l'aéroport (même comptoir qu'à l'arrivée). La voiture est incluse uniquement pour la semaine à Réunion. Vous n'en aurez pas à Maurice (transferts collectifs inclus + taxis sur place).</p></div></div>
+    <div class="ev"><span class="ev-t">07h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>Enregistrement vol AF7952</b><p>Convocation à 08h10. Présentez vos cartes d'embarquement (check-in en ligne fait la veille). PASSEPORT requis maintenant (entrée à Maurice = pays étranger).</p><div class="fl-strip">
+        <div class="fl-route"><span class="fl-from">RUN</span><span class="fl-arr">──────✈──────</span><span class="fl-to">MRU</span></div>
+        <div class="fl-info"><div><span>Vol</span>AF7952 (Air Mauritius)</div><div><span>Durée</span>~50 min</div><div><span>Départ</span>10h10</div><div><span>Arrivée</span>11h00</div></div>
+      </div>
+    </div></div>
+    <div class="ev"><span class="ev-t">11h00</span><span class="ev-dot d-p"></span><div class="ev-c"><b>🛬 Arrivée Sir S. Ramgoolam International — PASSEPORT</b><p>Bienvenue à l'Île Maurice ! Passage douanes (PASSEPORT obligatoire). File généralement courte pour les ressortissants européens.</p></div></div>
+    <div class="ev"><span class="ev-t">11h20</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🔴 Bureau SummerTimes n°16</b><p>Premier sur la gauche après la sortie des douanes. OU votre représentant Voyage Privé vous attend à droite des portes de sortie avec une pancarte. C'est votre point de contact pour le reste du séjour à Maurice.</p><div class="note">📞 Urgence Maurice : +230 594 02663 (Kursley Poisson, 24h/7j)</div></div></div>
+    <div class="ev"><span class="ev-t">11h45</span><span class="ev-dot d-p"></span><div class="ev-c"><b>🚌 Transfert collectif → Radisson Blu Poste Lafayette</b><p>Durée : 1h à 1h30 selon la route (côte est de l'île). Maximum 15 personnes dans le véhicule. 1 valise + 1 bagage à main autorisés par personne.</p></div></div>
+    <div class="ev"><span class="ev-t">13h15</span><span class="ev-dot d-p"></span><div class="ev-c"><b>🏨 Arrivée Radisson Blu Poste Lafayette — Poste de Flacq</b><p>Check-in officiel à 15h00. Demandez si un early check-in est possible. Sinon, laissez les bagages et allez directement à la plage !</p><div class="note">
+🍹 COCKTAIL DE BIENVENUE OFFERT à l'Aqua Bar (selon sélection carte)<br>
+🍽️ 1 DÎNER SPÉCIAL offert par personne au Aqua Beach Restaurant (à utiliser pendant le séjour)<br>
+💆 30% de réduction au Spa Radisson Blu<br>
+🌅 Accès aux restaurants du Radisson Blu Azuri Resort & Spa (site voisin)<br>
+🔞 Hôtel réservé aux adultes (18+) — ambiance chic et tranquille
+    </div></div></div>
+    <div class="ev"><span class="ev-t">15h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🌊 Plage de Poste de Flacq / Belle Mare</b><p>2 km de sable blanc immaculé, lagon turquoise protégé par le récif corallien. Premier bain dans l'océan Indien côté Maurice.</p></div></div>
+    <div class="ev"><span class="ev-t">19h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Dîner demi-pension (inclus) à l'hôtel</b><p>Découvrez les restaurants du Radisson Blu. La demi-pension inclut le dîner (hors boissons).</p></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ ÎLE MAURICE ═══════════════════ -->
+<div class="sec-head sec-maurice">
+  <h2>🐬 Île Maurice — Le Lagon Paradisiaque</h2>
+  <div class="sec-line"></div>
+</div>
+
+<!-- J9 LUNDI 15 JUIN -->
+<div class="day">
+  <div class="day-head dh-maurice">
+    <div class="day-num">J9<br>15/06</div>
+    <div class="day-meta"><strong>Catamaran — Île aux Cerfs &amp; dauphins</strong><span>Lundi 15 juin</span></div>
+    <span class="day-ico">⛵</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">07h00</span><span class="ev-dot d-p"></span><div class="ev-c"><b>☕ Petit-déjeuner buffet (demi-pension incluse)</b></div></div>
+    <div class="ev"><span class="ev-t">08h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Route vers Trou d'Eau Douce (~15 min)</b><p>Village de pêcheurs charmant au sud de l'hôtel. Point de départ des catamarans vers l'Île aux Cerfs. Taxi hôtel ou voiture de location journée.</p></div></div>
+    <div class="ev"><span class="ev-t">08h30</span><span class="ev-dot d-p"></span><div class="ev-c"><b>⛵ Embarquement catamaran — Journée complète</b><p>Petit groupe (max 12–15 pers recommandé). Au programme :</p><div class="note">
+🐬 Nage avec les dauphins sauvages (en chemin, selon présence)<br>
+💧 Cascade GRSE (Grande Rivière Sud Est) — une des plus belles de l'île, accessible uniquement en bateau<br>
+🤿 Snorkeling dans le lagon (masque + palmes fournis)<br>
+🍖 Barbecue à bord (déjeuner inclus) avec poissons grillés, salades, fruits frais<br>
+🌴 Île aux Cerfs — plage paradisiaque (20 min de marche pour trouver des criques désertes)<br>
+🥂 Bar ouvert à bord (rhum local, bière, jus frais)
+    </div>
+      <div class="resto"><strong>À réserver : Manawa / CheckYeti / Viator</strong><span>~89€/pers (petit groupe) ou ~1000€ (catamaran privé). Tino Boats Mauritius pour option privée premium.</span></div>
+    </div></div>
+    <div class="ev"><span class="ev-t">17h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🚗 Retour hôtel</b></div></div>
+    <div class="ev"><span class="ev-t">19h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Option : dîner Chez Tino à Trou d'Eau Douce</b><p>B59, Trou d'Eau Douce. Fruits de mer frais, le "Plateau Pêcheur" fait l'unanimité. Vue sur la baie. Ou demi-pension à l'hôtel si vous êtes épuisés.</p>
+      <div class="resto"><strong>Chez Tino (si choix sortie) — Réservation recommandée</strong><span>📞 +230 480 2769 — Ouvert lun, mer–dim. Arrivez tôt (parking limité).</span></div>
+    </div></div>
+  </div>
+</div>
+
+<!-- J10 MARDI 16 JUIN -->
+<div class="day">
+  <div class="day-head dh-maurice">
+    <div class="day-num">J10<br>16/06</div>
+    <div class="day-meta"><strong>Plongée côte est — Passe de Belle Mare</strong><span>Mardi 16 juin</span></div>
+    <span class="day-ico">🤿</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">07h30</span><span class="ev-dot d-p"></span><div class="ev-c"><b>☕ Petit-déjeuner</b></div></div>
+    <div class="ev"><span class="ev-t">08h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🤿 Blues Diving Centre — Belle Mare</b><p>Face à la plage de Belle Mare, moniteurs mauriciens natifs (ils connaissent chaque recoin des sites locaux). Ouvert 7j/7. Sites : Passe de Belle Mare (tombants colorés à grandes gorgones orange, nombreuses tortues) et épaves de la côte est.</p><p class="tip">💡 Précisez votre certification. La passe de Belle Mare avec courant fort est réservée aux plongeurs confirmés. Pour les débutants : sites plus calmes et peu profonds du lagon (magnifiques aussi).</p></div></div>
+    <div class="ev"><span class="ev-t">13h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Déjeuner — Symon's Restaurant</b><p>Coastal Road, Poste de Flacq (quelques min de l'hôtel). Cuisine mauricienne authentique : briyani, currys, sizzler. L'échappatoire parfaite des resorts pour un repas local. ~15–25€/pers.</p></div></div>
+    <div class="ev"><span class="ev-t">15h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🏄 Après-midi nautique libre</b><p>Kitesurf (vents d'alizés parfaits sur la côte est), paddle, kayak, bateau à fond de verre. Tout disponible sur la plage de l'hôtel ou à Belle Mare.</p></div></div>
+    <div class="ev"><span class="ev-t">19h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Dîner demi-pension</b><p>Ou utilisez votre <strong>dîner spécial offert</strong> à l'Aqua Beach Restaurant (1 repas à la carte par personne inclus dans le package). Commandez ce que vous voulez sur la carte — hors boissons.</p></div></div>
+  </div>
+</div>
+
+<!-- J11 MERCREDI 17 JUIN -->
+<div class="day">
+  <div class="day-head dh-maurice">
+    <div class="day-num">J11<br>17/06</div>
+    <div class="day-meta"><strong>Journée Sud — La Vanille + Blue Bay</strong><span>Mercredi 17 juin</span></div>
+    <span class="day-ico">🐊</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">07h30</span><span class="ev-dot d-p"></span><div class="ev-c"><b>☕ Petit-déjeuner tôt</b></div></div>
+    <div class="ev"><span class="ev-t">08h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Route vers La Vanille Nature Park (~1h)</b><p>Rivière des Anguilles, sud-ouest de l'île. Taxi ou location voiture journée.</p></div></div>
+    <div class="ev"><span class="ev-t">09h30</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🐢 La Vanille Nature Park — 2h30</b><p>La plus grande population de tortues géantes des Galápagos au monde. Aussi : crocodiles du Nil, lémuriens, iguanes, roussettes (chauve-souris frugivores), cerfs de Java en liberté. Le nourrissage des tortues géantes est le clou — elles viennent manger dans vos mains. Ouvert 9h–17h.</p></div></div>
+    <div class="ev"><span class="ev-t">12h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Déjeuner à Mahébourg ou en route</b><p>Mahébourg est un beau village colonial avec un marché animé le lundi (si repassage en semaine), des cafés et restaurants de fruits de mer face à la baie.</p></div></div>
+    <div class="ev"><span class="ev-t">14h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🤿 Blue Bay Marine Park</b><p>Parc marin protégé de 140 ha — le meilleur snorkeling de l'île. Coraux cerveau géants millénaires, plus de 70 espèces de poissons, tortues vertes, raies. Profondeur max 6m = accessible à tous. Louez un bateau à fond de verre ou snorkeling guidé (~300–500 MUR).</p><p class="tip">💡 Crème solaire biodégradable uniquement — il est interdit d'utiliser des crèmes chimiques dans le parc marin.</p></div></div>
+    <div class="ev"><span class="ev-t">16h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚗 Retour hôtel (~1h15)</b></div></div>
+    <div class="ev"><span class="ev-t">19h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Dîner demi-pension à l'hôtel</b></div></div>
+  </div>
+</div>
+
+<!-- J12 JEUDI 18 JUIN -->
+<div class="day">
+  <div class="day-head dh-maurice">
+    <div class="day-num">J12<br>18/06</div>
+    <div class="day-meta"><strong>Spa + Lagon + Grand dîner de clôture</strong><span>Jeudi 18 juin — ⛔ PAS DE PLONGÉE (vol demain)</span></div>
+    <span class="day-ico">💆</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">Matin</span><span class="ev-dot d-p"></span><div class="ev-c"><b>☕ Petit-déjeuner + dernière baignade matinale</b><p>Le lagon à l'aube est d'une beauté particulière. Soleil levant sur l'est de l'île.</p></div></div>
+    <div class="ev"><span class="ev-t">10h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>💆 Spa Radisson Blu</b><p>30% de réduction sur tous les soins (inclus dans votre package). Massage duo recommandé. Réservez à la réception dès votre arrivée ou ce matin.</p></div></div>
+    <div class="ev"><span class="ev-t">13h00</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🍽️ Déjeuner plage de l'hôtel</b></div></div>
+    <div class="ev"><span class="ev-t">15h00</span><span class="ev-dot d-r"></span><div class="ev-c"><b>⚠️ PRÉPARATION DES BAGAGES RETOUR</b><p>Vous avez droit à 2×20kg en soute + 2 bagages cabine sur Emirates. Profitez-en pour reconditionner tout ce qui a été acheté. N'oubliez pas les liquides et la crème solaire en soute.</p></div></div>
+    <div class="ev"><span class="ev-t">16h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>📱 Check-in Emirates en ligne</b><p>Ouvert depuis le 17/06 16h15. Sur emirates.com ou app Emirates → référence 2MD9JW → nom LATY. Choisissez vos sièges (côté fenêtre pour le coucher de soleil au-dessus de l'océan Indien ?).</p></div></div>
+    <div class="ev"><span class="ev-t">17h00</span><span class="ev-dot d-p"></span><div class="ev-c"><b>🌊 Dernière baignade dans le lagon</b><p>Profitez de chaque minute. Ce soir vous dormez dans un avion au-dessus du désert d'Arabie.</p></div></div>
+    <div class="ev"><span class="ev-t">19h30</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🌟 GRAND DÎNER DE CLÔTURE</b><p>Deux options, selon si vous avez utilisé votre dîner spécial :</p><div class="note">
+<b>Option 1 :</b> Aqua Beach Restaurant (Radisson Blu) — dîner spécial à la carte offert (1 repas/pers inclus). Pieds dans l'eau, cuisine gastronomique mauricienne.<br>
+<b>Option 2 :</b> LUX* Belle Mare Resort (2 km) — ambiance chic décontractée, excellent restaurant, expérience premium pour votre dernière nuit mauricienne.
+    </div></div></div>
+    <div class="ev"><span class="ev-t">22h00</span><span class="ev-dot d-k"></span><div class="ev-c"><b>🛏️ Couchez-vous tôt — Réveil ~10h30 demain</b><p>Vous avez le temps — vol à 16h15 seulement. Mais la nuit d'avion de retour sera longue.</p></div></div>
+  </div>
+</div>
+
+<!-- J13 VENDREDI 19 JUIN -->
+<div class="day">
+  <div class="day-head dh-retour">
+    <div class="day-num">J13<br>19/06</div>
+    <div class="day-meta"><strong>Départ Maurice → Dubai → Paris</strong><span>Vendredi 19 juin</span></div>
+    <span class="day-ico">🛫</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">Matin</span><span class="ev-dot d-p"></span><div class="ev-c"><b>☕ Dernier petit-déjeuner face à l'océan</b><p>Prenez votre temps. La journée est longue devant vous.</p></div></div>
+    <div class="ev"><span class="ev-t">10h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>Douche de courtoisie disponible après check-out</b><p>L'hôtel propose une douche de courtoisie pour profiter jusqu'au dernier moment (check-out officiel 12h00).</p></div></div>
+    <div class="ev"><span class="ev-t">12h00</span><span class="ev-dot d-r"></span><div class="ev-c"><b>✅ Check-out officiel Radisson Blu</b><p>Laissez vos bagages à la conciergerie si besoin. Vérifiez que SummerTimes vous a bien laissé la note de transfert la veille (heure de pick-up). Si non, appelez :</p><div class="note">📞 Kursley Poisson : +230 594 02663 (24h/7j)<br>📞 SummerTimes siège : +230 427 1111</div></div></div>
+    <div class="ev"><span class="ev-t">12h30</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🍽️ Dernier déjeuner mauricien</b><p>Restaurant de l'hôtel, plage voisine, ou Chez Tino à Trou d'Eau Douce pour terminer en beauté.</p></div></div>
+    <div class="ev"><span class="ev-t">13h00</span><span class="ev-dot d-r"></span><div class="ev-c"><b>🚌 Transfert SummerTimes → Aéroport SSR (~1h)</b></div></div>
+    <div class="ev"><span class="ev-t">14h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>Arrivée aéroport Sir S. Ramgoolam</b><p>Enregistrement Emirates EK702. Bagages en soute (2×20kg). Documents : PASSEPORT + carte d'embarquement (check-in fait en ligne).</p></div></div>
+    <div class="ev"><span class="ev-t">14h15</span><span class="ev-dot d-r"></span><div class="ev-c"><b>⏰ Convocation Emirates EK702</b></div></div>
+    <div class="ev"><span class="ev-t">16h15</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🛫 DÉCOLLAGE Maurice → Dubai EK702</b>
+      <div class="fl-strip">
+        <div class="fl-route"><span class="fl-from">MRU</span><span class="fl-arr">──────✈──────</span><span class="fl-to">DXB</span></div>
+        <div class="fl-info"><div><span>Vol</span>Emirates EK702</div><div><span>Départ</span>16h15 le 19/06</div><div><span>Arrivée</span>22h50 le 19/06</div><div><span>Escale Dubai</span>5h10</div></div>
+      </div>
+    </div></div>
+    <div class="ev"><span class="ev-t">22h50</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🌙 Arrivée Dubai International — Escale 5h10</b><p>Terminal 3 Emirates. Vous avez du temps : boutiques duty-free, restaurants, lounge (si carte Gold/Silver Emirates). L'aéroport de Dubai est immense et magnifique la nuit. Repas conseillé avant le prochain vol de nuit.</p></div></div>
+    <div class="ev"><span class="ev-t">02h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>⏰ Convocation + embarquement EK71 Dubai → Paris</b></div></div>
+    <div class="ev"><span class="ev-t">04h00</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🛫 Décollage Dubai → Paris-CDG</b>
+      <div class="fl-strip">
+        <div class="fl-route"><span class="fl-from">DXB</span><span class="fl-arr">──────✈──────</span><span class="fl-to">CDG</span></div>
+        <div class="fl-info"><div><span>Vol</span>Emirates EK71</div><div><span>Départ</span>04h00 le 20/06</div><div><span>Arrivée</span>09h20 le 20/06</div><div><span>Terminal CDG</span>Terminal 3</div></div>
+      </div>
+    </div></div>
+  </div>
+</div>
+
+<!-- RETOUR PARIS -->
+<div class="sec-head sec-retour">
+  <h2>🏠 Samedi 20 juin — Retour Paris</h2>
+  <div class="sec-line"></div>
+</div>
+<div class="day">
+  <div class="day-head dh-depart">
+    <div class="day-num">J14<br>20/06</div>
+    <div class="day-meta"><strong>Arrivée Paris-CDG → Bois-Colombes</strong><span>Samedi 20 juin</span></div>
+    <span class="day-ico">🏠</span>
+  </div>
+  <div class="tl">
+    <div class="ev"><span class="ev-t">09h20</span><span class="ev-dot d-g"></span><div class="ev-c"><b>🛬 Arrivée Paris Charles de Gaulle Terminal 3</b><p>Récupération bagages en soute (2×20kg). Passage douanes UE rapide.</p></div></div>
+    <div class="ev"><span class="ev-t">10h00</span><span class="ev-dot d-b"></span><div class="ev-c"><b>🚖 Retour à Bois-Colombes</b><p>Options :</p><div class="note">
+<b>VTC (recommandé) :</b> Uber/Bolt depuis CDG T3 → Bois-Colombes. ~55 min. ~55–80€.<br>
+<b>RER B :</b> CDG → Gare du Nord → (correspondance métro L13 ou RER) → Bois-Colombes. ~1h15. ~12€.<br>
+<b>Taxi G7 :</b> À la sortie des bagages, file taxi officielle. ~70–90€ tarif fixe CDG–92.
+    </div></div></div>
+    <div class="ev"><span class="ev-t">11h30</span><span class="ev-dot d-a"></span><div class="ev-c"><b>🏠 Bois-Colombes — Bon retour !</b><p>15 jours de volcans, lagons, dauphins, tortues et couchers de soleil dans l'océan Indien. Beau voyage à vous deux 🌴</p></div></div>
+  </div>
+</div>
+
+<footer>
+  <strong>🌴 Voyage Privé — Réunion &amp; Île Maurice • Juin 2026</strong>
+  François Legardinier &amp; Clémentine Laty • Dossier 104882659VPFR<br>
+  Assurance XplorAssur SWA009144824 • Urgence Réunion 06 92 40 32 09 • Urgence Maurice +230 594 02663
+</footer>
+
+</div>
+</body>
+</html>
